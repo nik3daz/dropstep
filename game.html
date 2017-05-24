@@ -1,0 +1,53 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        background: rgba(143, 208, 112, 0.72);;
+
+      }
+    </style>
+    <script src="stats.js"></script>
+    <script src="kinetic-v3.10.3.js"></script>
+    <script src="game.js"></script>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Press+Start+2P::latin' ] },
+        active: function() {
+            GAME_FONT = "'Press Start 2P'";
+            start_game();
+            var x = document.getElementById("error");
+            x.parentNode.removeChild(x);
+        },
+    //inactive: start_game,
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+        })(); 
+        /*
+        */
+    </script>
+
+
+  </head>
+  <body>
+    <div id="error">This browser is not supported or javascript is turned off</div>
+    <div id="container"></div>
+  </body>
+</html>
+
+
